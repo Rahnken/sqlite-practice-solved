@@ -202,6 +202,7 @@ const normalizeLine = (line) =>
     .map((word) => word.trim().toLowerCase())
     .filter((word) => word !== "")
     .join(" ");
+
 const alphabeticSorter = (a, b) => {
   if (a > b) {
     return 1;

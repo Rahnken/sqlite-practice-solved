@@ -173,7 +173,9 @@ describe("messing around", () => {
         await doesLineExistInTableSchema(db, "favorites", (line) => {
           return (
             normalizeLine(line).includes("unique(user_id, dog_id)") ||
-            normalizeLine(line).includes("unique(dog_id, user_id)")
+            normalizeLine(line).includes("unique(dog_id, user_id)") ||
+            normalizeLine(line).includes("unique(user_id,dog_id)") ||
+            normalizeLine(line).includes("unique(dog_id,user_id)")
           );
         })
       ).toBe(true);
